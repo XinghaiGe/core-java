@@ -1,5 +1,7 @@
 package ch03;
 
+import static java.lang.Math.*;
+
 public class Test {
     public static void basicType() {
         byte a = 1;
@@ -40,11 +42,70 @@ public class Test {
     }
 
     public static void math() {
-        
+        double x = 4;
+        double y = Math.sqrt(x);
+        System.out.println(y); // 2.0
+
+        y = Math.pow(x, 3);
+        System.out.println(y); // 64
+
+        System.out.println(Math.floorMod(5, 12)); // 5
+
+        System.out.println(Math.sin(3.0));
+        System.out.println(PI);
+
+        System.out.println(exp(10));
+        System.out.println(log(2));
+
+        System.out.println((int) Math.round(9.997));
+    }
+
+    public enum Size {
+        S, M, L, XL, XXL, XXXL;
+    }
+
+    public static void enumType() {
+        Size size = Size.S;
+        System.out.println(size);
+    }
+
+    public static void stringType() {
+        String s = String.join(" / ", "S", "M", "L", "XL");
+        System.out.println(s);
+        System.out.println("Hello".equals("Hello"));
+        System.out.println("hello".equalsIgnoreCase("HELLO"));
+
+        String greeting = "Hello";
+        int n = greeting.length(); // 5
+        System.out.println(n);
+
+        int cpCount = greeting.codePointCount(0, n);
+        System.out.println(cpCount);
+
+        char first = greeting.charAt(0);
+        char last  = greeting.charAt(4);
+        System.out.println(first);
+        System.out.println(last);
+
+        int index = greeting.offsetByCodePoints(0, 1);
+        System.out.println(index);
+        int cp = greeting.codePointAt(index);
+        System.out.println(cp);
+    }
+
+    // StringBuilder 适用于单线程，StringBuffer 适用于多线程。
+    public static void stringOther() {
+        StringBuilder builder = new StringBuilder();
+        builder.append('A');
+        builder.append('B');
+        System.out.println(builder.toString());
     }
 
     // strictfp, strict float point calculate(Under Java 17).
     public static strictfp void main(String[] args) {
-        Test.math();
+        // Test.math();
+        // Test.enumType();
+        // Test.stringType();
+        Test.stringOther();
     }
 }
