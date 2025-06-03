@@ -1,7 +1,7 @@
 package ch03;
 
 public class Test {
-    public static void main(String[] args) {
+    public void basicType() {
         byte a = 1;
         short b = 2;
         int c = 3;
@@ -18,18 +18,29 @@ public class Test {
         System.out.println(f);
         System.out.println(g);
         System.out.println(h);
-        
+    }
+
+    public void binOctDecHex() {
         System.out.println(0B00011101);
         System.out.println(0X5F3759DF);
         System.out.println(1_000_000_000);
         System.out.println(010);
         System.out.println(0x1.0p-3);
+    }
 
+    public void special() {
         System.out.println(Integer.MAX_VALUE);
         System.out.println(Double.POSITIVE_INFINITY);
         System.out.println(Double.NEGATIVE_INFINITY);
         System.out.println(Double.NaN);
+    }
 
+    public void unicode() {
         System.out.println('\u2122');
+    }
+
+    // strictfp, strict float point calculate(Under Java 17).
+    public static strictfp void main(String[] args) {
+        
     }
 }
