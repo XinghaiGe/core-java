@@ -1,4 +1,4 @@
-### Head First Java
+### Core Java
 
 [Java 核心技术官网](https://horstmann.com/corejava/)
 
