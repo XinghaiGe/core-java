@@ -50,4 +50,10 @@ class Employee {
         double raise = salary * byPercent / 100;
         salary += raise;
     }
+
+    public static void main(String[] args) {
+        Employee e  =new Employee("Romeo", 50000, 2003, 3, 31);
+        e.raiseSalary(10);
+        System.out.println(e.getName() + " " + e.getSalary());
+    }
 }
