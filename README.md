@@ -13,4 +13,4 @@
 + ch01 intro
 + ch02 environment
 + ch03 basic
-+ ch04 object oriented
++ ch04 object and class
