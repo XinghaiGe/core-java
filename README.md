@@ -14,3 +14,24 @@
 + ch02 environment
 + ch03 basic
 + ch04 object and class
+
+### CLASSPARH
+windows CMD
+```shell
+set CLASSPATH=D:\Software\maven_rep;.;.\archives\*
+```
+
+windows powershell
+```shell
+$env:CLASSPATH = "D:\Software\maven_rep;.;.\archives\*"
+```
+
+### Java Doc
+```shell
+javadoc -encoding utf-8 -charset utf-8 -d docDirectory ch04 ch03
+```
+
+默认包
+```shell
+javadoc -encoding utf-8 -charset utf-8 -d docDirectory *.java
+```
